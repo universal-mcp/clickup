@@ -118,7 +118,7 @@ class ClickupApp(APIApplication):
             requests.HTTPError: If the API request fails or returns an unsuccessful status code.
 
         Tags:
-            create, checklist, task-management, api
+            create, checklist, task-management, api, important
         """
         if task_id is None:
             raise ValueError("Missing required parameter 'task_id'")
@@ -157,7 +157,7 @@ class ClickupApp(APIApplication):
             HTTPError: Raised if the HTTP response contains an unsuccessful status code.
 
         Tags:
-            update, checklist, management, api
+            update, checklist, management, api, important
         """
         if checklist_id is None:
             raise ValueError("Missing required parameter 'checklist_id'")
@@ -187,7 +187,7 @@ class ClickupApp(APIApplication):
             HTTPError: If the HTTP request to delete the checklist fails (non-2xx status code).
 
         Tags:
-            remove, checklist, delete, management
+            remove, checklist, delete, management, important
         """
         if checklist_id is None:
             raise ValueError("Missing required parameter 'checklist_id'")
